@@ -5,17 +5,24 @@
    height:auto;
    font-weight:bold;
 } 
-.income{margin:0 auto;
+.income
+{
+margin:0 auto;
 display:flex;
 flex-direction:row;
 }
-.items{
+li{
+  list-style:none;
+}
+.items
+{
      color:green;
      margin:10%;
      margin-top:0;
      margin-bottom:0;
 }
- .adding{
+ .adding
+ {
    display:flex;
    flex-direction:row;
  }
@@ -23,35 +30,35 @@ flex-direction:row;
    
    margin-bottom:10%;
  }
-  .expenses  li{
-    text-decoration:none;
+  
+ input
+ {
+  border:none;
+  border-bottom:1px solid grey;
+  text-align:center;
+  font-size:25px;
  }
- input{
-border:none;
-border-bottom:1px solid grey;
-text-align:center;
-font-size:25px;
-
- }
-  input:focus, textarea:focus, select:focus {
+  input:focus, textarea:focus, select:focus 
+  {
         outline: none;
-    }
- .expenses button{
+  }
+ .expenses button
+ {
    margin-left:5%;
  }
- button:hover{
+ button:hover
+ {
    cursor:pointer;
    outline:none;
  }
- button{
-font-weight:bold;
-border:none;
-color:white;
-cursor:auto;
-border-radius:50px;
-margin-top:5%;
-padding:10px;
-background:green;
-font-size:20px;
-   height:40px;
+ button
+ {
+  font-weight:bold;
+  border:none;
+  color:white;
+  cursor:auto; background:darkgrey;
+  border-radius:50px;
+  font-size:20px;
+  height:30px;
  }
+  

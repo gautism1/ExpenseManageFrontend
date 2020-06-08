@@ -18,8 +18,14 @@ const [amount,setAmount]=useState(0);
              <input type="number" placeholder="  "className="items"  value={amount} 
                onChange={(e) =>setAmount(e.target.value)}>
                </input>
+               <br></br>
+               Mode of payment 
+               <br></br>   
+              Cash  <input type="radio" name="mode" value="cash"></input>
+              Card <input type="radio" name="mode" value="card"></input>  
                
-               <button>Add the expense now</button>
+<br></br>
+               <button>Add new</button>
            </form>
 
         </div>

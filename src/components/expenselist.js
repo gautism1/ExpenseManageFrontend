@@ -7,22 +7,15 @@ function expenselist()
     return(
 
          <div className="expenses">
-          
-         <label>List of expense</label>
          
-<ul>
-<li>First item is zero
-cash 200$ <button>Delete expense 
-</button> </li>
-
- 
-</ul>
-
-          </div>
-
-
-
+         <ul>
+           <li> 
+            cash 200$ 
+            <button> &#9986; 
+            </button>
+          </li>
+        </ul>
+        </div>
     );
 }
-
 export default expenselist;
