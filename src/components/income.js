@@ -27,7 +27,7 @@ const spent= earned-total
            <div className="items">
 
                 Total earned<h2>${earned} </h2>
-          </div>   \
+          </div>   
            <div className="items">
 
                 Total i spent<h2>$ {spent}} </h2>
