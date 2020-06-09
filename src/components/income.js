@@ -1,27 +1,40 @@
-import React from 'react';
+import React,{ useContext} from 'react';
  import '../App.css';
-
-function income()
+import { GlobalContext } from '../context/Globalstate';
+const Income=()=>
 {
+const {transactions} =useContext( GlobalContext );
 
+const amounts=transactions.map(transaction=>transaction.amount)
+
+const total =amounts.reduce((acc,item)=>   (acc+=item),0).toFixed(2);
+
+const earned=amounts.filter(item=> item >0)
+                   .reduce((acc,item) =>(acc+=item),0)
+                    .toFixed(2);
+
+const spent= earned-total 
+          console.log(amounts);          
     return(
 
          <div className="income">
+          
            <div className="items">
-              Total i had<h2>$123.00</h2>
-           </div>
+
+               Now i have<h2>${total}</h2>
+          </div>    
+
            <div className="items">
-               Now i have<h2>$100.00</h2>
+
+                Total earned<h2>${earned} </h2>
+          </div>   \
+           <div className="items">
+
+                Total i spent<h2>$ {spent}} </h2>
+          </div>       
           </div>
-
-           <div className="items">
-             this much i spent<h2>$23.00</h2>
-           </div>
-          </div>
-
-
 
     );
 }
 
-export default income;
+export default Income;
