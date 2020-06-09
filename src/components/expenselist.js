@@ -1,21 +1,22 @@
-import React from 'react';
-import '../App.css';
-
-function expenselist()
+import React,  { useContext }  from 'react';
+import { GlobalContext } from '../context/Globalstate';
+import {Transaction} from './Transaction';
+ 
+  const  Expenselist= () =>
 {
-
+  const {transactions} =useContext( GlobalContext );
+   console.log(transactions)
     return(
-
          <div className="expenses">
-         
-         <ul>
-           <li> 
-            cash 200$ 
-            <button> &#9986; 
-            </button>
-          </li>
+         <h3>History</h3>
+       <ul>
+         {transactions.map(transaction =>  
+         ( <Transaction key={transaction.id} transaction={transaction}/>  ) )
+         }        
         </ul>
         </div>
     );
 }
-export default expenselist;
+
+
+export  default Expenselist;

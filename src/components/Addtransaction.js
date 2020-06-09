@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 
 function Addtransaction()
 {
-const [text,setText]=useState("");
+const [text,setText]=useState(" ");
 const [amount,setAmount]=useState(0);
-
     return(
 
          <div className="adding ">
