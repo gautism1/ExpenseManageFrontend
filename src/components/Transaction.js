@@ -10,7 +10,7 @@ const {deletetrans }=useContext(GlobalContext)
      return (
 
             <li className= {transaction.amount<0? 'minus': ' plus'}> 
-           <span class="reason"> {transaction.text} </span>  <span class="amount">  { (transaction.amount)}Rs.</span>
+          <span class="reason"> {transaction.text} </span>  <span class="amount">  { (transaction.amount)}Rs.</span>       
             <button onClick={()=> deletetrans(transaction.id)} >  &#10060; 
             </button>
           </li> 

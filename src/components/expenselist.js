@@ -7,8 +7,8 @@ import {Transaction} from './Transaction';
   const {transactions} =useContext( GlobalContext );
    console.log(transactions);
     return(
-         <div className="expenses">
-         <h3>History</h3>
+         <div className="expenses">   History 
+         <h3><span class="reason"> Reason</span >    <span class="amount">Amount  </span></h3>
        <ul>
          {transactions.map(transaction =>  
          ( <Transaction key={transaction.id} transaction={transaction}/>  ) )

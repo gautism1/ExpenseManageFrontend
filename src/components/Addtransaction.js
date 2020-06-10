@@ -27,25 +27,16 @@ const {additem}=useContext(GlobalContext);
          <div className="adding ">
 
            <form onSubmit={onsubmit}>
-      <table>
-      <tr>
-      
-        <td>   Purpose of payment </td>
-        <td>     <input type="text" placeholder="Reason" className="items" value={text} 
+          Purpose of payment  
+            <input type="text" placeholder="Reason" className="items" value={text} 
              onChange={(e) =>setText(e.target.value)}/>
               
-             </td>
-      </tr>       
- <tr>
-          <td>  Amount of payment(-ve for spent,+ve for earned)  </td>
-         <td>    <input type="number" placeholder="Amount" className="items"  value={amount} 
+               <br></br>
+             
+           Amount of payment(-ve for spent,+ve for earned)   
+             <input type="number" placeholder="Amount" className="items"  value={amount} 
                onChange={(e) =>setAmount(e.target.value)}> 
                </input> 
-               </td>
-               </tr>
-               </table>
-               
-               <br></br>
              
                <br></br>   
               

@@ -1,19 +1,18 @@
 .App {
    text-align: center;
    margin:0 auto;
-   width:550px;
+   width:50%;
    border-radius:10px;
    height:auto;
    font-weight:bold;
 } 
 .income
-{
+{  width:50%;
   margin:0 auto;
   display:flex;
   flex-direction:row;
   flex-wrap:wrap;
   justify-content:center;
- 
   text-align:center;
 }
 li{
@@ -31,7 +30,7 @@ li{
    flex-direction:row;
  }
  form{
-   text-align:left;
+   text-align:center
  }
   
  input
@@ -101,9 +100,11 @@ li{
   .amount{
     margin-left:10%;
     color:brown;
+    float:left; 
   }
   .reason{
     font-size:20px;
     margin-right:10%;
+     
     color:purple;
   }
