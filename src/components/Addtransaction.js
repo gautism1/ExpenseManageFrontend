@@ -3,8 +3,8 @@ import { GlobalContext } from '../context/Globalstate';
 
 function Addtransaction()
 {
-const [text,setText]=useState(" ");
-const [amount,setAmount]=useState(0);
+const [text,setText]=useState( );
+const [amount,setAmount]=useState();
 
 
 const {additem}=useContext(GlobalContext);
@@ -31,14 +31,14 @@ const {additem}=useContext(GlobalContext);
       <tr>
       
         <td>   Purpose of payment </td>
-        <td>     <input type="text" placeholder="  " className="items" value={text} 
+        <td>     <input type="text" placeholder="Reason" className="items" value={text} 
              onChange={(e) =>setText(e.target.value)}/>
               
              </td>
       </tr>       
  <tr>
           <td>  Amount of payment(-ve for spent,+ve for earned)  </td>
-         <td>    <input type="number" placeholder="  "className="items"  value={amount} 
+         <td>    <input type="number" placeholder="Amount" className="items"  value={amount} 
                onChange={(e) =>setAmount(e.target.value)}> 
                </input> 
                </td>

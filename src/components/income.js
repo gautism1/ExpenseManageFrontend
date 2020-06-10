@@ -19,18 +19,18 @@ const spent= earned-total
 
          <div className="income">
           
-           <div className="items">
+           <div className="items a">
 
                Now i have<h2>${total}</h2>
           </div>    
 
-           <div className="items">
+           <div className="items b">
 
                 Total earned<h2>${earned} </h2>
           </div>   
-           <div className="items">
+           <div className="items c">
 
-                Total i spent<h2>$ {spent}} </h2>
+                Total i spent<h2>$ {spent} </h2>
           </div>       
           </div>
 
