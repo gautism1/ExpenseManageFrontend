@@ -5,6 +5,7 @@ import { GlobalContext } from '../context/Globalstate';
  {
 const {deletetrans }=useContext(GlobalContext)
    console.log(deletetrans);
+   console.log(transaction);
   // const sign=transaction.amount>0?'+':'-';
      return (
 

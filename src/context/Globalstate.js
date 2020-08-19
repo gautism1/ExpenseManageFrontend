@@ -43,18 +43,23 @@ async function getTransaction()
 }
 catch(err)
 {
+
   dispatch({
     type:'Transaction_error',
     payload:err.response.data.error
   });
 }
 }
-function additem(transaction)
+ async function additem(transaction)
 {
+
+  const res=await axios.post(`/api/v1/transactions`,transaction);
+  console.log("After adding>>>",res)
+
   dispatch({
 
-    type:'add this',
-    payload:transaction
+    type:'add_this',
+    payload:res
   });
 }
 return (   

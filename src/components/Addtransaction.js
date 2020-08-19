@@ -14,8 +14,8 @@ const {additem}=useContext(GlobalContext);
     e.preventDefault();
 
     const newtrans={
-  id:Math.floor(Math.random()*10000000),text,
-  amount:+amount 
+    id:Math.floor(Math.random()*10000000),text,
+    amount:+amount 
 
     }
 
