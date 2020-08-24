@@ -43,7 +43,6 @@ async function getTransaction()
 }
 catch(err)
 {
-
   dispatch({
     type:'Transaction_error',
     payload:err.response.data.error
