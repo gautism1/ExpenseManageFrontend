@@ -9,17 +9,19 @@ const initialstate={
 };
 export const GlobalContext=createContext(initialstate);
 //provider component
+
 export const GlobalProvider=  ({children})  =>  
 {
 const [state,dispatch]=useReducer(AppReducer,initialstate);
 // actions performed
+console.log("always gauti");
 async function getTransaction()
 {
   try{
     const res=await axios.get(`/api/v1/transactions`);
     console.log(">>>",res.data);
     dispatch({
-      type:'get_transaction ',
+      type:'get_transaction',
       payload:res.data.data
     });
   }
@@ -27,7 +29,7 @@ async function getTransaction()
   {
     console.log(err)
      dispatch({
-      type:' transaction_error ',
+      type:'transaction_error',
       payload:err.res
     });
   }
@@ -35,7 +37,7 @@ async function getTransaction()
  async function deletetrans(id)
 {
   try{
-    await axios.delete(`/api/v1/transaction/${id}`);  
+    await axios.delete(`/api/v1/transactions/${id}`);  
   dispatch({
     type:'delete_this_id',
     payload:id
@@ -51,16 +53,14 @@ catch(err)
 }
  async function additem(transaction)
 {
-
   const res=await axios.post(`/api/v1/transactions`,transaction);
   console.log("After adding>>>",res)
-
   dispatch({
-
     type:'add_this',
     payload:res
   });
 }
+
 return (   
     <GlobalContext.Provider value={{
         transactions:state.transactions,
