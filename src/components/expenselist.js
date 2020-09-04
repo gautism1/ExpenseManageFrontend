@@ -12,42 +12,14 @@ import {Transaction} from './Transaction';
   },[]);
   return(
          <div className="expenses">   History 
-         <h3><span className="reason"> Reason</span >    <span className="amount">Amount  </span></h3>
+         <h3><span className="reason"> Reason</span > 
+             <span className="amount">Amount  </span></h3>
        <ul>
-         {transactions.map(transaction =>  
-         ( <Transaction key={transaction.id} transaction={transaction}/>  ) )
+         {transactions.map( (transaction, index) =>  
+         ( <Transaction key={index} transaction={transaction}/>  ) )
          }        
         </ul>
         </div>
     );
-}
-
-// class Expenselist extends React.Component {
-//   constructor(props) {
-//     super(props)
-//   }
-
-//   componentDidMount  () {
-//      const {getTransaction} = useContext(GlobalContext);
-//      getTransaction();
-//   }
-
-//   render() {
-
-
-//     const {transactions} =useContext( GlobalContext );
-//     return(
-//          <div className="expenses">   History 
-//          <h3><span className="reason"> Reason</span >    <span className="amount">Amount  </span></h3>
-//        <ul>
-//          {transactions.map(transaction =>  
-//          ( <Transaction key={transaction.id} transaction={transaction}/>  ) )
-//          }        
-//         </ul>
-//         </div>
-//     );
-//   }
-// }
-
-
+} 
 export  default Expenselist;

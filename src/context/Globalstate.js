@@ -13,13 +13,11 @@ export const GlobalContext=createContext(initialstate);
 export const GlobalProvider=  ({children})  =>  
 {
 const [state,dispatch]=useReducer(AppReducer,initialstate);
-// actions performed
-console.log("always gauti");
+
 async function getTransaction()
 {
   try{
     const res=await axios.get(`/api/v1/transactions`);
-    console.log(">>>",res.data);
     dispatch({
       type:'get_transaction',
       payload:res.data.data
@@ -37,11 +35,23 @@ async function getTransaction()
  async function deletetrans(id)
 {
   try{
-    await axios.delete(`/api/v1/transactions/${id}`);  
-  dispatch({
+  
+  axios.delete(`/api/v1/transactions/${id}`)
+   .then((data)=>{
+ console.log("after success")
+    // getTransaction();
+
+dispatch({
     type:'delete_this_id',
     payload:id
   });
+
+
+   }).catch((err)=>{
+     console.log("Errorrrrrrr")
+     alert("Something went wrong , Please check backend")
+   });
+
 }
 catch(err)
 {
@@ -53,12 +63,22 @@ catch(err)
 }
  async function additem(transaction)
 {
-  const res=await axios.post(`/api/v1/transactions`,transaction);
-  console.log("After adding>>>",res)
-  dispatch({
+  axios.post(`/api/v1/transactions`,transaction)
+  .then((res)=>{
+  console.log("After adding>>>",res.data.data)
+  
+dispatch({
     type:'add_this',
-    payload:res
+    payload:res.data.data
   });
+  })
+  .catch((err)=>{
+    alert("Something went wrong in addition")
+  })
+
+
+
+  
 }
 
 return (   
